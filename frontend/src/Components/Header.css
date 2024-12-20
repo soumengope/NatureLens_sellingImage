@@ -1,0 +1,126 @@
+*{
+    padding:0;
+    margin:0;
+}
+.header_main{
+    background-color: rgb(148, 235, 235);
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    gap:0.5rem;
+    padding:0rem 1rem;
+}
+.header_left{
+    display:flex;
+    gap:0.5rem;
+    justify-content: center;
+    align-items: center;
+}
+.profile{
+    padding-right:0.5rem;
+}
+.name_profile{
+    display:flex;
+    flex-direction: row;
+    gap:0.5rem;
+    align-items: center;
+}
+.name_profile  p{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.header_logo img{
+    width:50px;
+    height:40px;
+    padding-top:0.2rem;
+}
+.web_name h1{
+    font-size: 2rem;
+}
+.profile img, .name_profile img{
+    width:30px;
+    height:30px;
+    cursor:pointer;
+    filter: invert(27%) sepia(98%) saturate(1206%) hue-rotate(93deg) brightness(95%) contrast(107%);
+}
+.hideSec{
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(40px);
+    transition: all 0.5s ease;
+    position: absolute;
+    right:2.5rem;
+    width:200px;
+    height:auto;
+    background-color:rgb(29, 28, 28);
+    padding:1.5rem 0rem;
+    border-radius: 20px 0 20px 20px;
+}
+.hideSec > div + div{
+    padding-top:1.5rem;
+}
+.hideSec :is(a){
+    text-decoration: none;
+    color:white;
+    background-color: green;
+    width:80px;
+    padding:0.3rem 1rem;
+}
+.showSec{
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+    transition: all 0.5s ease;
+    position: absolute;
+    right:2.5rem;
+    width:200px;
+    height:auto;
+    background-color:rgb(29, 28, 28);
+    padding:1.5rem 0rem;
+    border-radius: 20px 0 20px 20px;
+}
+.showSec > div + div{
+    padding-top:1.5rem;
+}
+.showSec :is(a){
+    text-decoration: none;
+    color:white;
+    background-color: green;
+    width:80px;
+    padding:0.3rem 1rem;
+}
+.showSec button,.hideSec button{
+    background-color: green;
+    color:white;
+    width:80px;
+    border:none;
+    cursor: pointer;
+    outline: none;
+    padding:0.3rem 1rem;
+}
+@media screen and (max-width:1024px){
+    .header_main{
+        padding:0.3rem 1rem;
+    }
+    .header_logo img{
+        margin-top:0.2rem;
+        width:35px;
+        height:30px;
+    }
+    .web_name h1{
+        font-size: 1.5rem;
+    }
+    .profile img{
+        width:25px;
+        height:25px;
+    }
+    .name_profile  p{
+        font-size: 1rem;
+    }
+    .name_profile{
+        display:flex;
+        flex-direction: column;
+        gap:0.5rem;
+        align-items: center;
+    }
+}
